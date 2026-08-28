@@ -6,26 +6,16 @@
   <title>IDFI Documentation</title>
 
   <!-- IDFI SEO & Social Meta -->
-    <meta name="description" content="Independent Digital Finance Index (IDFI) – soft-pegged DeFi index on BSC & Solana powered by IDOLL, IDEU and the IDFI governance token.">
+    <meta name="description" content="Independent Digital Finance (IDFI) is developing controlled private digital market infrastructure built around protocol-owned capital, isolated risk domains and verifiable operations.">
 
+    <meta property="og:title" content="IDFI — Independent Digital Finance">
+    <meta property="og:description" content="Controlled private digital market infrastructure built around protocol-owned capital, bounded market capacity and isolated risk controls.">
     
-    <meta property="og:title" content="IDFI – Independent Digital Finance Index">
-    <meta property="og:description" content="Peg tokens, liquidity pools and automated market making for a transparent, yield-driven DeFi ecosystem.">
-    <meta property="og:type" content="website">
-    
-    <meta property="og:url" content="https://idfi.finance/">
-    
-    <meta property="og:image" content="img/idfi-logo.svg">
-
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@IDFI_Offical">
-    <meta name="twitter:title" content="IDFI – Independent Digital Finance Index">
-    <meta name="twitter:description" content="Built on BSC & Solana. Powered by IDOLL, IDEU and the IDFI governance token.">
-    <meta name="twitter:image" content="img/idfi-logo.svg">
-
-  
-  <style>
+	
+	<meta name="twitter:title" content="IDFI — Independent Digital Finance">
+    <meta name="twitter:description" content="IDFI EX is being developed as controlled private market infrastructure with protocol-owned capital, bounded capacity and verifiable operations.">
+	
+	<style>
   
 .hero {
   padding: 34px 40px !important;
@@ -509,8 +499,10 @@
     <div class="hero-left">
       <h1 class="hero-title">IDFI Documentation</h1>
       <p class="hero-sub">
-        Independent Digital Finance Index (IDFI) — a DeFi index ecosystem built on BSC &amp; Solana,
-        powered by soft-pegged assets, transparent LP pools and automated routing.
+        Independent Digital Finance (IDFI) is developing IDFI EX —
+        controlled private digital market infrastructure built around
+        protocol-owned capital, isolated risk domains, bounded market
+        capacity and independently verifiable operations.
       </p>
     </div>
 
@@ -527,20 +519,21 @@
         <aside class="sidebar" aria-label="Documentation navigation">
           <div class="side-head">
             <p class="side-title">Contents</p>
-            <span class="side-pill">Phase 1</span>
+            <span class="side-pill">Private Infrastructure</span>
           </div>
           <ul class="nav" id="sideNav">
 
             <li><a href="#doc-overview">Overview</a></li>
-            <li><a href="#doc-architecture">Protocol Architecture</a></li>
-            <li><a href="#doc-token-suite">Token Suite</a></li>
-            <li><a href="#doc-tokenomics">Tokenomics</a></li>
-			<li><a href="#doc-lp-providers">Liquidity Providers</a></li>
-            <li><a href="#doc-liquidity">Liquidity & Peg Mechanism</a></li>
+		    <li><a href="#doc-architecture">IDFI EX Architecture</a></li>
+			<li><a href="#doc-controlled-capital-model">Controlled Capital Model</a></li>
+			<li><a href="#doc-safe-capacity-risk-controls">Safe Capacity & Risk Controls</a></li>
+			<li><a href="#doc-market-infrastructure">Market Infrastructure</a></li>
+			<li><a href="#doc-idoll-legacy-external-market">IDOLL Legacy External Market</a></li>
+            <li><a href="#doc-digital-assets">Digital Assets</a></li>
             <li><a href="#doc-contracts">Networks & Contracts</a></li>
-            <li><a href="#doc-security">Security & Fake Tokens</a></li>
+            <li><a href="#doc-security">Security</a></li>
             <li><a href="#doc-whitepaper">Whitepaper</a></li>
-            <li><a href="#doc-roadmap">Roadmap & Changelog</a></li>
+            <li><a href="#doc-roadmap">Development Status & Roadmap</a></li>
             <li><a href="#doc-faq">FAQ</a></li>
 
           </ul>
@@ -572,15 +565,16 @@
                     <h3 class="doc-nav-title">DOCUMENTATION</h3>
                     <ul class="doc-nav-list">
                         <li><a href="#doc-overview">Overview</a></li>
-						<li><a href="#doc-architecture">Protocol Architecture</a></li>
-                        <li><a href="#doc-token-suite">Token Suite</a></li>
-                        <li><a href="#doc-tokenomics">Tokenomics</a></li>
-						<li><a href="#doc-lp-providers">Liquidity Providers</a></li>
-						<li><a href="#doc-liquidity">Liquidity & Peg Mechanism</a></li>
+						<li><a href="#doc-architecture">IDFI EX Architecture</a></li>
+						<li><a href="#doc-controlled-capital-model">Controlled Capital Model</a></li>
+						<li><a href="#doc-safe-capacity-risk-controls">Safe Capacity & Risk Controls</a></li>
+						<li><a href="#doc-market-infrastructure">Market Infrastructure</a></li>
+						<li><a href="#doc-idoll-legacy-external-market">IDOLL Legacy External Market</a></li>
+                        <li><a href="#doc-digital-assets">Digital Assets</a></li>
                         <li><a href="#doc-contracts">Networks & Contracts</a></li>
-                        <li><a href="#doc-security">Security & Fake Tokens</a></li>
+                        <li><a href="#doc-security">Security</a></li>
                         <li><a href="#doc-whitepaper">Whitepaper</a></li>
-                        <li><a href="#doc-roadmap">Roadmap & Changelog</a></li>
+                        <li><a href="#doc-roadmap">Development Status & Roadmap</a></li>
                         <li><a href="#doc-faq">FAQ</a></li>
                     </ul>
                 </div>
@@ -589,327 +583,926 @@
             
             <div class="col-md-9">
                 <!-- Overview -->
-                <div id="doc-overview" class="doc-section">
-                    <h2>Overview</h2>
-					
-                    <p>
-					    IDFI is built by an experienced team with multiple years of hands-on involvement in cryptocurrency markets, 
-						including trading, liquidity management and algorithmic strategies.
-                        The protocol is not backed by venture capital or external investors. It is designed to grow organically through its own liquidity engine, 
-						internal capital allocation and community-driven participation.
-                    </p>
-					
-					<p>
-                        Independent Digital Finance Index (IDFI) is a DeFi index ecosystem built on BSC and Solana, 
-						powered by soft-pegged assets and a transparent LP engine. 
-						The ecosystem is designed around market-tracking peg tokens and the IDFI governance token.
-                    </p>
-                    
-					<p>
-                        The goal is to provide users with access to USD- and EUR-based on-chain index strategies through a single,
-                        unified, decentralized and transparent protocol.
-                    </p>
-					
-					<p>
-					    IDFI is not funded by external investors.
-                        The protocol grows through its own liquidity engine, internal capital allocation and community participation.
-                        This approach ensures independence, transparency and long-term sustainability.
-					</p>
-                </div>
+                <!-- =========================================================
+        OVERVIEW
+========================================================= -->
+<div id="doc-overview" class="doc-section">
+  <h2>Overview</h2>
 
-                
-<!-- Protocol Architecture -->
-<div id="doc-architecture" class="doc-section">
-  <h2>Protocol Architecture</h2>
   <p>
-    IDFI is designed as an index‑protocol ecosystem built on BSC and Solana. Phase‑1 focuses on
-    transparent liquidity pools, soft‑pegged index assets, and automated routing / market actions to keep
-    peg ranges stable.
+    Independent Digital Finance (IDFI) is developing controlled digital
+    market infrastructure designed around protocol-owned capital,
+    isolated risk domains and verifiable operational controls.
+  </p>
+
+  <p>
+    Current development is focused on IDFI EX, a private market
+    infrastructure layer in which public deposits, public liquidity
+    participation and public trading are not currently enabled.
+  </p>
+
+  <p>
+    The system is designed to separate accounting capital from executable
+    market capacity. Capital availability alone does not create trading
+    authority. Market actions must remain within independently bounded
+    capacity, inventory and risk controls.
+  </p>
+
+  <p>
+    IDOLL represents IDFI's first live on-chain market experience.
+    Its existing PancakeSwap V3 market remains independently accessible
+    on-chain, while protocol liquidity expansion and active market
+    operations are currently paused.
   </p>
 
   <div class="doc-card">
-    <h4>Core building blocks</h4>
+    <h4>Current Development Position</h4>
     <ul class="doc-list">
-      <li><strong>DEX Layer:</strong> primary execution venues (PancakeSwap / Raydium) plus routing paths.</li>
-      <li><strong>Transparent LP Engine:</strong> LP pools, fee accounting, and mint/burn rails for soft‑pegged assets.</li>
-      <li><strong>Peg Token System:</strong> market‑tracking assets (IDOLL, IDEU) with soft‑peg ranges.</li>
-      <li><strong>IDFI Governance:</strong> protocol parameters and value capture from fees and strategy revenue.</li>
+      <li><strong>IDFI EX:</strong> private infrastructure development.</li>
+      <li><strong>Public deposits:</strong> not enabled.</li>
+      <li><strong>Public trading:</strong> not enabled.</li>
+      <li><strong>Public liquidity participation:</strong> not enabled.</li>
+      <li><strong>IDOLL protocol market operations:</strong> paused.</li>
+      <li><strong>New smart-contract development:</strong> not part of the current development phase.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- =========================================================
+     IDFI EX ARCHITECTURE
+========================================================= -->
+<div id="doc-architecture" class="doc-section">
+  <h2>IDFI EX Architecture</h2>
+
+  <p>
+    IDFI EX is being developed as an isolated private market architecture.
+    Its design principle is that capital, market capacity and execution
+    authority remain separate control domains.
+  </p>
+
+  <p>
+    The infrastructure is designed to fail closed when required identity,
+    accounting, capacity, inventory or isolation conditions are not
+    satisfied.
+  </p>
+
+  <div class="doc-card">
+    <h4>Core Building Blocks</h4>
+
+    <ul class="doc-list">
+      <li>
+        <strong>IDFI EX CAPITAL:</strong>
+        protocol-controlled treasury capital reserved for future
+        operational use.
+      </li>
+
+      <li>
+        <strong>Controlled Capital / CORE-HPP:</strong>
+        protocol-owned capital admitted into the private operating
+        capital domain under explicit accounting controls.
+      </li>
+
+      <li>
+        <strong>Safe Capacity & Risk Controls:</strong>
+        bounded market capacity derived from available protocol capital,
+        executable depth, inventory limits and operational risk limits.
+      </li>
+
+      <li>
+        <strong>Private Market Infrastructure:</strong>
+        internal market logic that can produce bounded market-action
+        candidates without independently authorizing real execution.
+      </li>
+
+      <li>
+        <strong>Asset-Local Inventory Domains:</strong>
+        independent inventory limits for each supported asset without
+        unrestricted cross-asset borrowing or balance substitution.
+      </li>
     </ul>
   </div>
 
-  
-<div class="diagram-wrap" aria-label="IDFI protocol diagram">
-  <svg class="diagram-svg" viewBox="0 0 1100 560" xmlns="http://www.w3.org/2000/svg" role="img">
-    <defs>
-      <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-        <stop offset="0" stop-color="rgba(124,58,237,0.85)"/>
-        <stop offset="1" stop-color="rgba(34,197,94,0.75)"/>
-      </linearGradient>
-      <linearGradient id="g2" x1="0" x2="1" y1="1" y2="0">
-        <stop offset="0" stop-color="rgba(255,255,255,0.14)"/>
-        <stop offset="1" stop-color="rgba(255,255,255,0.06)"/>
-      </linearGradient>
-      <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="rgba(0,0,0,0.35)"/>
-      </filter>
-      <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-        <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="rgba(124,58,237,0.35)"/>
-      </filter>
-      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-        <path d="M0,0 L12,6 L0,12 Z" fill="rgba(255,255,255,0.65)"/>
-      </marker>
-    </defs>
 
-    <g class="svg-grid" opacity="0.20">
-      <path d="M0 80 H1100" stroke="rgba(255,255,255,0.12)" />
-      <path d="M0 160 H1100" stroke="rgba(255,255,255,0.10)" />
-      <path d="M0 240 H1100" stroke="rgba(255,255,255,0.10)" />
-      <path d="M0 320 H1100" stroke="rgba(255,255,255,0.10)" />
-      <path d="M0 400 H1100" stroke="rgba(255,255,255,0.10)" />
-      <path d="M0 480 H1100" stroke="rgba(255,255,255,0.10)" />
-      <path d="M110 0 V560" stroke="rgba(255,255,255,0.08)" />
-      <path d="M220 0 V560" stroke="rgba(255,255,255,0.08)" />
-      <path d="M330 0 V560" stroke="rgba(255,255,255,0.08)" />
-      <path d="M440 0 V560" stroke="rgba(255,255,255,0.08)" />
-      <path d="M550 0 V560" stroke="rgba(255,255,255,0.08)" />
-      <path d="M660 0 V560" stroke="rgba(255,255,255,0.08)" />
-      <path d="M770 0 V560" stroke="rgba(255,255,255,0.08)" />
-      <path d="M880 0 V560" stroke="rgba(255,255,255,0.08)" />
-      <path d="M990 0 V560" stroke="rgba(255,255,255,0.08)" />
-    </g>
+  <div class="diagram-wrap" aria-label="IDFI EX architecture diagram">
 
-    <text x="34" y="54" class="svg-text">
-      IDFI Protocol Architecture (Phase 1)
-    </text>
-    <text x="34" y="78" class="svg-muted">
-      Soft‑pegged index assets + transparent LP engine + automated routing & market making.
-    </text>
+    <svg class="diagram-svg"
+         viewBox="0 0 1100 560"
+         xmlns="http://www.w3.org/2000/svg"
+         role="img">
 
-    <g filter="url(#shadow)">
-      <rect x="50" y="120" rx="18" ry="18" width="240" height="120" fill="url(#g2)" stroke="rgba(255,255,255,0.16)"/>
-      <text x="78" y="158" class="svg-text" fill="rgba(255,255,255,0.90)" font-size="18" font-weight="700" font-family="ui-sans-serif, system-ui">Users</text>
-      <text x="78" y="185" class="svg-muted" fill="rgba(255,255,255,0.62)" font-size="13" font-family="ui-sans-serif, system-ui">Wallets & liquidity providers</text>
-      <text x="78" y="208" class="svg-muted" fill="rgba(255,255,255,0.62)" font-size="13" font-family="ui-sans-serif, system-ui">Traders & strategy users</text>
-    </g>
+      <defs>
 
-    <g filter="url(#shadow)">
-      <rect x="345" y="120" rx="18" ry="18" width="320" height="120" fill="url(#g2)" stroke="rgba(255,255,255,0.16)"/>
-      <text x="372" y="158" class="svg-text" fill="rgba(255,255,255,0.90)" font-size="18" font-weight="700" font-family="ui-sans-serif, system-ui">DEX Layer</text>
-      <text x="372" y="185" class="svg-muted" fill="rgba(255,255,255,0.62)" font-size="13" font-family="ui-sans-serif, system-ui">BSC: PancakeSwap • Aggregators</text>
-      <text x="372" y="208" class="svg-muted" fill="rgba(255,255,255,0.62)" font-size="13" font-family="ui-sans-serif, system-ui">Solana: Raydium • Jupiter routes</text>
-    </g>
+        <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stop-color="rgba(124,58,237,0.85)"/>
+          <stop offset="1" stop-color="rgba(34,197,94,0.75)"/>
+        </linearGradient>
 
-    <g filter="url(#shadow)">
-      <rect x="720" y="120" rx="18" ry="18" width="330" height="120" fill="url(#g2)" stroke="rgba(255,255,255,0.16)"/>
-      <text x="747" y="158" class="svg-text" fill="rgba(255,255,255,0.90)" font-size="18" font-weight="700" font-family="ui-sans-serif, system-ui">Transparent LP Engine</text>
-      <text x="747" y="185" class="svg-muted" fill="rgba(255,255,255,0.62)" font-size="13" font-family="ui-sans-serif, system-ui">LP pools + fee accounting</text>
-      <text x="747" y="208" class="svg-muted" fill="rgba(255,255,255,0.62)" font-size="13" font-family="ui-sans-serif, system-ui">Mint/burn rails for soft‑pegs</text>
-    </g>
+        <linearGradient id="g2" x1="0" x2="1" y1="1" y2="0">
+          <stop offset="0" stop-color="rgba(255,255,255,0.14)"/>
+          <stop offset="1" stop-color="rgba(255,255,255,0.06)"/>
+        </linearGradient>
 
-    <path class="svg-arrow" d="M290 180 H340" stroke="rgba(255,255,255,0.55)" stroke-width="3" marker-end="url(#arrow)"/>
-    <path class="svg-arrow" d="M665 180 H710" stroke="rgba(255,255,255,0.55)" stroke-width="3" marker-end="url(#arrow)"/>
+        <filter id="shadow"
+                x="-30%" y="-30%"
+                width="160%" height="160%">
+          <feDropShadow
+            dx="0"
+            dy="10"
+            stdDeviation="12"
+            flood-color="rgba(0,0,0,0.35)"/>
+        </filter>
 
-    <g filter="url(#shadow)">
-      <rect x="120" y="300" rx="18" ry="18" width="430" height="190" fill="url(#g2)" stroke="rgba(255,255,255,0.16)"/>
-      <text x="148" y="340" class="svg-text" fill="rgba(255,255,255,0.90)" font-size="18" font-weight="700" font-family="ui-sans-serif, system-ui">Peg Token System</text>
+        <filter id="glow"
+                x="-30%" y="-30%"
+                width="160%" height="160%">
+          <feDropShadow
+            dx="0"
+            dy="0"
+            stdDeviation="10"
+            flood-color="rgba(124,58,237,0.35)"/>
+        </filter>
 
-      <g filter="url(#glow)">
-        <rect x="148" y="362" rx="14" ry="14" width="120" height="44" fill="rgba(124,58,237,0.16)" stroke="rgba(124,58,237,0.45)"/>
-        <text x="178" y="390" class="svg-chip" fill="rgba(255,255,255,0.90)" font-size="14" font-weight="700" font-family="ui-sans-serif, system-ui">IDOLL</text>
+        <marker id="arrow"
+                markerWidth="12"
+                markerHeight="12"
+                refX="10"
+                refY="6"
+                orient="auto">
+          <path d="M0,0 L12,6 L0,12 Z"
+                fill="rgba(255,255,255,0.65)"/>
+        </marker>
 
-        <rect x="280" y="362" rx="14" ry="14" width="120" height="44" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.35)"/>
-        <text x="315" y="390" class="svg-chip" fill="rgba(255,255,255,0.88)" font-size="14" font-weight="700" font-family="ui-sans-serif, system-ui">IDEU</text>
+      </defs>
 
-        <rect x="412" y="418" rx="14" ry="14" width="120" height="44" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
-        <text x="444" y="446" class="svg-chip" fill="rgba(255,255,255,0.82)" font-size="14" font-weight="700" font-family="ui-sans-serif, system-ui">Index</text>
+
+      <!-- background grid -->
+      <g class="svg-grid" opacity="0.20">
+        <path d="M0 80 H1100" stroke="rgba(255,255,255,0.12)" />
+        <path d="M0 160 H1100" stroke="rgba(255,255,255,0.10)" />
+        <path d="M0 240 H1100" stroke="rgba(255,255,255,0.10)" />
+        <path d="M0 320 H1100" stroke="rgba(255,255,255,0.10)" />
+        <path d="M0 400 H1100" stroke="rgba(255,255,255,0.10)" />
+        <path d="M0 480 H1100" stroke="rgba(255,255,255,0.10)" />
+        <path d="M110 0 V560" stroke="rgba(255,255,255,0.08)" />
+        <path d="M220 0 V560" stroke="rgba(255,255,255,0.08)" />
+        <path d="M330 0 V560" stroke="rgba(255,255,255,0.08)" />
+        <path d="M440 0 V560" stroke="rgba(255,255,255,0.08)" />
+        <path d="M550 0 V560" stroke="rgba(255,255,255,0.08)" />
+        <path d="M660 0 V560" stroke="rgba(255,255,255,0.08)" />
+        <path d="M770 0 V560" stroke="rgba(255,255,255,0.08)" />
+        <path d="M880 0 V560" stroke="rgba(255,255,255,0.08)" />
+        <path d="M990 0 V560" stroke="rgba(255,255,255,0.08)" />
       </g>
 
-      <text x="148" y="478" class="svg-muted" fill="rgba(255,255,255,0.60)" font-size="13" font-family="ui-sans-serif, system-ui">
-        Soft‑pegged ranges maintained via LP depth, routing and market actions.
+
+      <!-- title -->
+      <text x="34" y="54" class="svg-text">
+        IDFI EX — Isolated Private Market Architecture
       </text>
-    </g>
 
-    <g filter="url(#shadow)">
-      <rect x="590" y="320" rx="18" ry="18" width="460" height="150" fill="url(#g2)" stroke="rgba(255,255,255,0.16)"/>
-      <text x="618" y="360" class="svg-text" fill="rgba(255,255,255,0.90)" font-size="18" font-weight="700" font-family="ui-sans-serif, system-ui">IDFI Governance & Value Capture</text>
-      <text x="618" y="388" class="svg-muted" fill="rgba(255,255,255,0.62)" font-size="13" font-family="ui-sans-serif, system-ui">Fee flows from LPs + strategy revenue</text>
-      <text x="618" y="410" class="svg-muted" fill="rgba(255,255,255,0.62)" font-size="13" font-family="ui-sans-serif, system-ui">Governance: parameters, listings, transparency</text>
-      <text x="618" y="432" class="svg-muted" fill="rgba(255,255,255,0.62)" font-size="13" font-family="ui-sans-serif, system-ui">Future options: burn / redistribution / lock models</text>
-
-      <rect x="618" y="444" rx="14" ry="14" width="162" height="44" fill="url(#g1)" opacity="0.22" stroke="rgba(255,255,255,0.20)"/>
-      <text x="676" y="472" class="svg-chip" fill="rgba(255,255,255,0.92)" font-size="14" font-weight="800" font-family="ui-sans-serif, system-ui">IDFI</text>
-    </g>
-
-    <path class="svg-arrow" d="M885 240 V290" stroke="rgba(255,255,255,0.45)" stroke-width="3" marker-end="url(#arrow)"/>
-    <path class="svg-arrow" d="M550 395 H585" stroke="rgba(255,255,255,0.55)" stroke-width="3" marker-end="url(#arrow)"/>
-
-    <g filter="url(#shadow)">
-      <rect x="50" y="505" rx="18" ry="18" width="1000" height="40" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)"/>
-      <text x="78" y="532" class="svg-muted" fill="rgba(255,255,255,0.62)" font-size="13" font-family="ui-sans-serif, system-ui">
-        Automation Layer (Phase 1): routing, monitoring, market-making bots, risk controls • (Phase 2): cross‑chain expansion & deeper strategy suite
+      <text x="34" y="78" class="svg-muted">
+        Protocol-owned capital • bounded capacity • isolated inventory • fail-closed controls
       </text>
-    </g>
-  </svg>
 
-  <div class="diagram-meta">
-    <span class="badge">BSC + Solana</span>
-    <span class="badge">Soft‑Peg Ranges</span>
-    <span class="badge">Transparent LP Engine</span>
-    <span class="badge">Automated Routing</span>
-    <span class="badge">Governance Value Capture</span>
+
+      <!-- IDFI EX CAPITAL -->
+      <g filter="url(#shadow)">
+
+        <rect x="50"
+              y="120"
+              rx="18"
+              ry="18"
+              width="240"
+              height="120"
+              fill="url(#g2)"
+              stroke="rgba(255,255,255,0.16)"/>
+
+        <text x="78"
+              y="158"
+              class="svg-text"
+              font-size="18"
+              font-weight="700"
+              font-family="ui-sans-serif, system-ui">
+          IDFI EX CAPITAL
+        </text>
+
+        <text x="78"
+              y="185"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          Protocol-controlled treasury capital
+        </text>
+
+        <text x="78"
+              y="208"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          No public capital admission
+        </text>
+
+      </g>
+
+
+      <!-- CORE HPP -->
+      <g filter="url(#shadow)">
+
+        <rect x="345"
+              y="120"
+              rx="18"
+              ry="18"
+              width="320"
+              height="120"
+              fill="url(#g2)"
+              stroke="rgba(255,255,255,0.16)"/>
+
+        <text x="372"
+              y="158"
+              class="svg-text"
+              font-size="18"
+              font-weight="700"
+              font-family="ui-sans-serif, system-ui">
+          Controlled Capital / CORE-HPP
+        </text>
+
+        <text x="372"
+              y="185"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          Protocol-owned admitted operating capital
+        </text>
+
+        <text x="372"
+              y="208"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          Accounting and ownership boundaries
+        </text>
+
+      </g>
+
+
+      <!-- SAFE CAPACITY -->
+      <g filter="url(#shadow)">
+
+        <rect x="720"
+              y="120"
+              rx="18"
+              ry="18"
+              width="330"
+              height="120"
+              fill="url(#g2)"
+              stroke="rgba(255,255,255,0.16)"/>
+
+        <text x="747"
+              y="158"
+              class="svg-text"
+              font-size="18"
+              font-weight="700"
+              font-family="ui-sans-serif, system-ui">
+          Safe Capacity & Risk Controls
+        </text>
+
+        <text x="747"
+              y="185"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          Capacity bounded by available capital
+        </text>
+
+        <text x="747"
+              y="208"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          Depth, inventory and risk limits
+        </text>
+
+      </g>
+
+
+      <path class="svg-arrow"
+            d="M290 180 H340"
+            stroke="rgba(255,255,255,0.55)"
+            stroke-width="3"
+            marker-end="url(#arrow)"/>
+
+      <path class="svg-arrow"
+            d="M665 180 H710"
+            stroke="rgba(255,255,255,0.55)"
+            stroke-width="3"
+            marker-end="url(#arrow)"/>
+
+
+      <!-- ASSET LOCAL INVENTORY -->
+      <g filter="url(#shadow)">
+
+        <rect x="120"
+              y="300"
+              rx="18"
+              ry="18"
+              width="430"
+              height="190"
+              fill="url(#g2)"
+              stroke="rgba(255,255,255,0.16)"/>
+
+        <text x="148"
+              y="340"
+              class="svg-text"
+              font-size="18"
+              font-weight="700"
+              font-family="ui-sans-serif, system-ui">
+          Asset-Local Inventory Domains
+        </text>
+
+        <g filter="url(#glow)">
+
+          <rect x="148"
+                y="362"
+                rx="14"
+                ry="14"
+                width="120"
+                height="44"
+                fill="rgba(124,58,237,0.16)"
+                stroke="rgba(124,58,237,0.45)"/>
+
+          <text x="180"
+                y="390"
+                class="svg-chip"
+                font-size="14"
+                font-weight="700"
+                font-family="ui-sans-serif, system-ui">
+            Asset A
+          </text>
+
+
+          <rect x="280"
+                y="362"
+                rx="14"
+                ry="14"
+                width="120"
+                height="44"
+                fill="rgba(124,58,237,0.12)"
+                stroke="rgba(124,58,237,0.35)"/>
+
+          <text x="312"
+                y="390"
+                class="svg-chip"
+                font-size="14"
+                font-weight="700"
+                font-family="ui-sans-serif, system-ui">
+            Asset B
+          </text>
+
+
+          <rect x="412"
+                y="362"
+                rx="14"
+                ry="14"
+                width="120"
+                height="44"
+                fill="rgba(255,255,255,0.06)"
+                stroke="rgba(255,255,255,0.18)"/>
+
+          <text x="444"
+                y="390"
+                class="svg-chip"
+                font-size="14"
+                font-weight="700"
+                font-family="ui-sans-serif, system-ui">
+            Asset C
+          </text>
+
+        </g>
+
+
+        <text x="148"
+              y="446"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          Independent inventory limits per supported asset
+        </text>
+
+        <text x="148"
+              y="470"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          No unrestricted cross-asset borrowing or substitution
+        </text>
+
+      </g>
+
+
+      <!-- PRIVATE MARKET -->
+      <g filter="url(#shadow)">
+
+        <rect x="590"
+              y="320"
+              rx="18"
+              ry="18"
+              width="460"
+              height="150"
+              fill="url(#g2)"
+              stroke="rgba(255,255,255,0.16)"/>
+
+        <text x="618"
+              y="360"
+              class="svg-text"
+              font-size="18"
+              font-weight="700"
+              font-family="ui-sans-serif, system-ui">
+          Private Market Infrastructure
+        </text>
+
+        <text x="618"
+              y="388"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          Internal market decisions under bounded capacity
+        </text>
+
+        <text x="618"
+              y="410"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          STP and synthetic-volume protections
+        </text>
+
+        <text x="618"
+              y="432"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          Candidate generation does not equal execution authority
+        </text>
+
+      </g>
+
+
+      <path class="svg-arrow"
+            d="M885 240 V290"
+            stroke="rgba(255,255,255,0.45)"
+            stroke-width="3"
+            marker-end="url(#arrow)"/>
+
+      <path class="svg-arrow"
+            d="M550 395 H585"
+            stroke="rgba(255,255,255,0.55)"
+            stroke-width="3"
+            marker-end="url(#arrow)"/>
+
+
+      <!-- bottom invariant -->
+      <g filter="url(#shadow)">
+
+        <rect x="50"
+              y="505"
+              rx="18"
+              ry="18"
+              width="1000"
+              height="40"
+              fill="rgba(255,255,255,0.04)"
+              stroke="rgba(255,255,255,0.14)"/>
+
+        <text x="78"
+              y="532"
+              class="svg-muted"
+              font-size="13"
+              font-family="ui-sans-serif, system-ui">
+          Control invariant: capital availability ≠ market capacity ≠ execution authority
+        </text>
+
+      </g>
+
+    </svg>
+
+
+    <div class="diagram-meta">
+      <span class="badge">Protocol-Owned Capital</span>
+      <span class="badge">CORE-HPP</span>
+      <span class="badge">Safe Capacity</span>
+      <span class="badge">Asset-Local Inventory</span>
+      <span class="badge">STP Controls</span>
+      <span class="badge">Fail Closed</span>
+    </div>
+
   </div>
-</div>
 
 
   <div class="mini-grid">
+
     <div class="doc-card">
-      <h4>Phase‑1 scope</h4>
+      <h4>Current Scope</h4>
+
       <ul class="doc-list">
-        <li>Launch initial LP pools on first DEXes.</li>
-        <li>Publish official contract table + verified socials.</li>
-        <li>Document routing logic, peg mechanics and risk controls.</li>
+        <li>Private infrastructure development.</li>
+        <li>Internal market and accounting controls.</li>
+        <li>Protocol-owned capital model.</li>
+        <li>Asset-local inventory controls.</li>
+        <li>Safe-capacity enforcement.</li>
       </ul>
     </div>
+
+
     <div class="doc-card">
-      <h4>Design principles</h4>
+      <h4>Design Principles</h4>
+
       <ul class="doc-list">
-        <li><strong>Transparency:</strong> clear sources of truth for contracts, pools and announcements.</li>
-        <li><strong>Safety:</strong> anti‑fake token guidance + operational controls.</li>
-        <li><strong>Scalability:</strong> modular growth to more pairs and chains over time.</li>
+        <li>
+          <strong>Isolation:</strong>
+          capital and risk domains remain explicitly separated.
+        </li>
+
+        <li>
+          <strong>Bounded Capacity:</strong>
+          market activity cannot exceed approved capacity.
+        </li>
+
+        <li>
+          <strong>Traceability:</strong>
+          internal decisions remain attributable and auditable.
+        </li>
+
+        <li>
+          <strong>Fail Closed:</strong>
+          invalid or incomplete control state does not create authority.
+        </li>
       </ul>
+
     </div>
+
   </div>
+
 </div>
 
-<!-- Liquidity & Peg Mechanism -->
-<div id="doc-liquidity" class="doc-section">
-  <h2>Liquidity &amp; Peg Mechanism</h2>
+
+<!-- =========================================================
+     CONTROLLED CAPITAL MODEL
+========================================================= -->
+<div id="doc-controlled-capital-model" class="doc-section">
+
+  <h2>Controlled Capital Model</h2>
+
   <p>
-    Peg tokens in the IDFI ecosystem are <strong>soft‑pegged</strong>. This means the protocol targets a pricing range
-    rather than a hard fixed price. The primary stability tools are LP depth, routing, and market actions.
+    IDFI EX is designed around protocol-owned operating capital.
+    Public liquidity providers, public deposits and unaffiliated
+    third-party capital are not part of the current CORE-HPP model.
   </p>
 
   <div class="doc-card">
-    <h4>How soft‑pegs are maintained</h4>
+
+    <h4>Capital Separation</h4>
+
     <ul class="doc-list">
-      <li><strong>LP depth:</strong> deeper pools reduce slippage and improve peg stability.</li>
-      <li><strong>Routing:</strong> trades can follow optimal routes across pools to reduce price impact.</li>
-      <li><strong>Market actions:</strong> automated strategies may support liquidity and narrow spreads.</li>
-      <li><strong>Transparency:</strong> official contracts and pools are always verified in this documentation.</li>
+
+      <li>
+        Treasury capital remains separate from admitted operating capital.
+      </li>
+
+      <li>
+        Capital must pass explicit accounting and ownership controls before
+        becoming eligible for operational capacity calculations.
+      </li>
+
+      <li>
+        Capital admission does not automatically create market or execution
+        authority.
+      </li>
+
+      <li>
+        Public or unrelated external capital cannot silently enter the
+        CORE-HPP accounting domain.
+      </li>
+
     </ul>
+
   </div>
+
 
   <div class="doc-card">
-    <h4>Risk notes</h4>
-    <ul class="doc-list">
-      <li>Soft‑pegs can deviate during extreme volatility or low liquidity conditions.</li>
-      <li>Users should verify pool addresses and avoid unofficial pairs.</li>
-      <li>Never share seed phrases or private keys — IDFI team will not DM for sensitive info.</li>
-    </ul>
+
+    <h4>CORE-HPP Principle</h4>
+
+    <p>
+      CORE-HPP represents the protocol-controlled private operating capital
+      domain used by IDFI EX. It is designed to remain isolated from public
+      liquidity and unrelated third-party capital.
+    </p>
+
   </div>
+
 </div>
-<!-- Token Suite -->
-                <div id="doc-token-suite" class="doc-section">
-                    <h2>Token Suite</h2>
-                    <div class="doc-card">
-                        <h4>Peg Tokens</h4>
-                        <ul>
-                            <li><strong>IDOLL</strong> – Independent Dollar (USD soft-pegged)</li>
-                            <li><strong>IDEU</strong> – Independent Euro (EUR soft-pegged)</li>
-                            </ul>
-                    </div>
-                    <div class="doc-card">
-                        <h4>Governance & Index Token</h4>
-                        <ul>
-                            <li><strong>IDFI</strong> – Governance, fee & revenue-sharing token.</li>
-                            <li>Earns value from LP pools, peg-token pairs and automated market-making strategies (Bot-Style).</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!-- Tokenomics -->
-                <div id="doc-tokenomics" class="doc-section">
-                    <h2>Tokenomics – IDFI</h2>
-                    <div class="doc-card">
-                        <ul class="doc-list">
-                            <li><strong>Total Supply:</strong> 350,000,000 IDFI (Fixed)</li>
-                            <li><strong>Premint:</strong> 15,000,000 IDFI</li>
-                            <li><strong>Halving:</strong> Supply-release model that reduces over time (liquidity first, inflation later).</li>
-                            <li><strong>Model:</strong>Trade-and-Earn design, no PoW mining.</li>
-                        </ul>
-                    </div>
 
-                    <div class="doc-card">
-                        <h4>Premint Allocation (15M IDFI)</h4>
-                        <ul class="doc-list">
-                            <li><strong>Exchange Liquidity:</strong>Initial liquidity for CEX / DEX listings.</li>
-                            <li><strong>Community Incentives:</strong>Liquidity farming, airdrops and ecosystem campaigns.</li>
-                            <li><strong>Strategic Partnerships:</strong>Exchange negotiations, infrastructure partnerships, integrations.</li>
-                            <li><strong>Operations Reserve:</strong>Development, audits and general ecosystem expenses.</li>
-                        </ul>
-                    </div>
+<!-- =========================================================
+     SAFE CAPACITY & RISK CONTROLS
+========================================================= -->
+<div id="doc-safe-capacity-risk-controls" class="doc-section">
 
-                    <div class="doc-card">
-                        <h4>Fee & Revenue Model</h4>
-                        <ul class="doc-list">
-                            <li>LP fees and automated market-maker revenue feed back into the IDFI ecosystem.</li>
-                            <li>Community can later vote for burn, redistribution or governance-locked staking models.</li>
-                        </ul>
-                    </div>
-                </div>
+  <h2>Safe Capacity &amp; Risk Controls</h2>
+
+  <p>
+    IDFI EX does not treat available treasury capital as unrestricted
+    executable capital. Market capacity is bounded by multiple independent
+    controls.
+  </p>
+
+  <div class="doc-card">
+
+    <h4>Capacity Inputs</h4>
+
+    <ul class="doc-list">
+
+      <li>Available protocol operating capital.</li>
+      <li>Executable market depth.</li>
+      <li>Asset-local inventory limits.</li>
+      <li>Operational risk limits.</li>
+      <li>Price deviation and spread conditions.</li>
+      <li>Market-data freshness.</li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="doc-card">
+
+    <h4>Decision Principle</h4>
+
+    <p>
+      A market-action candidate may only be produced when required controls
+      are satisfied. Invalid, stale, excessive or incomplete conditions are
+      designed to result in no action or denial rather than automatic
+      execution.
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     MARKET INFRASTRUCTURE
+========================================================= -->
+<div id="doc-market-infrastructure" class="doc-section">
+
+  <h2>Market Infrastructure</h2>
+
+  <p>
+    IDFI EX is currently being developed as private internal infrastructure.
+    Public customer trading and public deposits are not currently enabled.
+  </p>
+
+  <div class="doc-card">
+
+    <h4>Market-Control Principles</h4>
+
+    <ul class="doc-list">
+
+      <li>
+        Market actions must represent legitimate economic purpose.
+      </li>
+
+      <li>
+        Self-trading and synthetic-volume targeting are not permitted
+        design objectives.
+      </li>
+
+      <li>
+        Candidate notional cannot be silently increased or substituted
+        between control layers.
+      </li>
+
+      <li>
+        Asset identities and inventory domains must remain consistent
+        through the control chain.
+      </li>
+
+      <li>
+        A market candidate does not independently authorize wallet,
+        settlement or transaction execution.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="doc-card">
+
+    <h4>Current Operational Status</h4>
+
+    <p>
+      IDFI EX remains in private infrastructure development.
+      The current objective is to validate accounting, inventory,
+      market-data and risk-control layers before any broader operational
+      expansion is considered.
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     IDOLL LEGACY EXTERNAL MARKET
+========================================================= -->
+<div id="doc-idoll-legacy-external-market" class="doc-section">
+
+  <h2>IDOLL Legacy External Market</h2>
+
+  <p>
+    IDOLL is a BNB Smart Chain soft-pegged digital dollar asset and
+    represents IDFI's first live on-chain market deployment.
+  </p>
+
+  <p>
+    The existing IDOLL / USDT PancakeSwap V3 market remains independently
+    accessible on-chain. Protocol liquidity expansion and active protocol
+    market operations are currently paused.
+  </p>
+
+  <div class="doc-card">
+
+    <h4>Current Status</h4>
+
+    <ul class="doc-list">
+
+      <li>
+        <strong>Network:</strong>
+        BNB Smart Chain.
+      </li>
+
+      <li>
+        <strong>Existing external market:</strong>
+        IDOLL / USDT on PancakeSwap V3.
+      </li>
+
+      <li>
+        <strong>Protocol liquidity expansion:</strong>
+        paused.
+      </li>
+
+      <li>
+        <strong>Protocol market operations:</strong>
+        paused.
+      </li>
+
+      <li>
+        <strong>Market data:</strong>
+        independently verifiable through public blockchain explorers and
+        analytics platforms.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="doc-card">
+
+    <h4>Development Position</h4>
+
+    <p>
+      IDOLL remains part of IDFI's historical and operational development
+      record. No immediate expansion timeline is currently presented.
+      Any future change in IDOLL's protocol-supported market status will be
+      documented through official IDFI channels before implementation.
+    </p>
+
+  </div>
+
+</div>
+        <!-- =========================================================
+     DIGITAL ASSETS
+========================================================= -->
+<div id="doc-digital-assets" class="doc-section">
+
+  <h2>Digital Assets</h2>
+
+  <p>
+    IDFI's current public digital-asset footprint is limited to IDOLL,
+    the Independent Dollar deployed on BNB Smart Chain.
+  </p>
+
+  <p>
+    Previously considered additional token deployments are not part of
+    the current development phase. IDFI is presently focused on the
+    development and validation of IDFI EX private market infrastructure
+    rather than the creation of new smart contracts or additional tokens.
+  </p>
+
+
+  <div class="doc-card">
+
+    <h4>IDOLL — Independent Dollar</h4>
+
+    <ul class="doc-list">
+
+      <li>
+        <strong>Status:</strong>
+        deployed.
+      </li>
+
+      <li>
+        <strong>Network:</strong>
+        BNB Smart Chain.
+      </li>
+
+      <li>
+        <strong>Asset type:</strong>
+        USD-referenced soft-pegged digital asset.
+      </li>
+
+      <li>
+        <strong>Existing external market:</strong>
+        IDOLL / USDT on PancakeSwap V3.
+      </li>
+
+      <li>
+        <strong>Protocol market operations:</strong>
+        paused.
+      </li>
+
+      <li>
+        <strong>Protocol liquidity expansion:</strong>
+        paused.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="doc-card">
+
+    <h4>Current Asset Development Policy</h4>
+
+    <ul class="doc-list">
+
+      <li>
+        No additional IDFI ecosystem token deployment is currently scheduled.
+      </li>
+
+      <li>
+        New smart-contract development is not part of the current
+        infrastructure phase.
+      </li>
+
+      <li>
+        Current development resources are focused on IDFI EX accounting,
+        capital isolation, market controls, inventory management and
+        operational infrastructure.
+      </li>
+
+      <li>
+        Any future digital-asset deployment would require a new technical,
+        operational and risk review before implementation.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="doc-card">
+
+    <h4>IDOLL Future Status</h4>
+
+    <p>
+      IDOLL is not presented as an abandoned asset. It remains IDFI's first
+      live on-chain deployment and part of the project's operational history.
+      No immediate reactivation or expansion timeline is currently announced.
+    </p>
+
+    <p>
+      Any future protocol-supported expansion of IDOLL will only be considered
+      after the IDFI EX infrastructure reaches the required operational and
+      risk-control maturity.
+    </p>
+
+  </div>
+
+</div>
 				
-				<!-- Liquidity Providers -->
-				<div id="doc-lp-providers" class="doc-section">
-				     <h2>Liquidity Providers</h2>
-					 <div class="doc-card">
-                        <h4>Why LP Providers Matter?</h4>
-						<p>
-						Liquidity Providers are the foundation of the IDFI ecosystem.</p>
-                        
-						<p>
-						Instead of relying on centralized market makers, IDFI grows through transparent 
-						on-chain liquidity supplied by the community and ecosystem participants.</p>
-                        </div>
-						
-						<div class="doc-card">
-						<h4>Liquidity Providers Help:</h4>
-						<p>The protocol is designed so that deeper liquidity enables more efficient routing and healthier 
-						   trading conditions across all IDFI assets.</p>
-						 
-						 <ul class="doc-list">
-                            <li>Increase market depth.</li>
-                            <li>Reduce slippage.</li>
-							<li>Improve peg stability.</li>
-							<li>Strengthen price discovery.</li>
-                            <li>Support long-term ecosystem growth.</li>
-						</ul>
-                    </div>
-					
-					<div class="doc-card">
-						<h4>This Activity Is Intended To Support:</h4>
-						
-						<p>IDFI maintains transparent on-chain market activity through its automated liquidity engine.</p>
-						
-						<p>The objective is not to guarantee returns, but to promote an active decentralized market 
-							where liquidity providers can participate under transparent market conditions.</p>
-						
-						 <ul class="doc-list">
-                            <li>Healthier pool utilization.</li>
-                            <li>Recurring swap execution.</li>
-							<li>Improved price discovery.</li>
-							<li>sustainable liquidity growth.</li>
-				        </ul>
-                    </div>
-                </div>
-					 
-
-                <!-- Networks & Contracts -->
+				
+		        <!-- Networks & Contracts -->
                 <div id="doc-contracts" class="doc-section">
                     <h2>Networks &amp; Contract Addresses</h2>
 
                     <p class="doc-note">
-                        Below is the official contract table of the IDFI ecosystem.
-                        Contracts will be <strong>updated after</strong> mainnet deployment.
+                        This section contains currently deployed IDFI smart-contract information.
+                        Contract addresses should be verified only through official IDFI documentation
+                        and recognized blockchain explorers.
                     </p>
 
                     <div class="doc-card">
@@ -922,384 +1515,988 @@
                             <table class="table contract-table">
                                 <thead>
                                     <tr>
-                                        <th>Token</th>
-                                        <th>Network</th>
-                                        <th>Contract Address</th>
-                                        <th>Status</th>
+                                        <div class="doc-card">
+
+                                    <h4>Deployed Contract</h4>
+
+                                <div class="table-wrap">
+                                  <table class="doc-table">
+                                    <thead>
+                                     <tr>
+                                     <th>Asset</th>
+                                     <th>Network</th>
+                                     <th>Contract Address</th>
+                                     <th>Status</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>IDOLL</td>
-                                        <td><span class="pill net-bsc">BSC</span></td>
-                                        <td class="addr">
-                                        <span class="addr-wrap">
-                                        <span class="addr-text">0x8E9AdB904824fDfBEc1a5f15c4146a23dc3453EF</span>
-                                        <button class="copy-btn" type="button" data-copy="0x8E9AdB904824fDfBEc1a5f15c4146a23dc3453EF" title="Copy contract address">Copy</button>
-                                        </span>
-                                        </td>
-                                        <td><span class="pill status-verified">Verified</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>IDEU</td>
-                                        <td><span class="pill net-bsc">BSC</span></td>
-                                        <td class="addr"><span class="addr-wrap"><span class="addr-text">TBA</span><button class="copy-btn" type="button" data-copy="TBA" title="Contract not published yet" disabled>Copy</button></span></td>
-                                        <td><span class="pill status-pending">Pending</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>IDFI</td>
-                                        <td><span class="pill net-other">BSC / Other</span></td>
-                                        <td class="addr"><span class="addr-wrap"><span class="addr-text">TBA</span><button class="copy-btn" type="button" data-copy="TBA" title="Contract not published yet" disabled>Copy</button></span></td>
-                                        <td><span class="pill status-pending">Pending</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
 
-                        <p class="doc-note">
-                           Once mainnet is live, official addresses will be published here
-						   <strong>and on verified socials (X & Telegram).</strong>
-                            
-                        </p>
-                    </div>
-                </div>
+                            <tbody>
+                                <tr>
+                                   <td><strong>IDOLL</strong></td>
+                                   <td>BNB Smart Chain</td>
+                                   <td>
+                                   <code>0x8E9AdB904824fDfBEc1a5f15c4146a23dc3453EF</code>
+                                </td>
+                            <td>Deployed</td>
+                        </tr>
+                    </tbody>
+                 </table>
+               </div>
 
-                <!-- Security & Fake Tokens -->
-                <div id="doc-security" class="doc-section">
-                    <h2>Security &amp; Fake Tokens</h2>
-                    <div class="doc-card">
-                        <p>
-                            IDFI ecosystem prioritizes transparency and on-chain authenticity.
-                            
-							</p>
-                        <ul class="doc-list">
-                            <li>Always verify contract addresses from the official documentation page.</li>
-                            <li>Beware of similarly named or typo-tokens.</li>
-							<li>Liquidity information and official pools are also published only through this documentation and verified social channels.</li>
-                            <li>Team will <strong>never</strong> send DMs requesting private keys, seed phrases or OTC trades.</li>
-                        </ul>
-                    </div>
-                </div>
+            </div>
+			
+			<div class="doc-card">
+
+  <h4>Contract Verification Policy</h4>
+
+  <ul class="doc-list">
+
+    <li>
+      Only contract addresses published through official IDFI documentation
+      and verified IDFI communication channels should be treated as official.
+    </li>
+
+    <li>
+      Users should independently verify the network and contract address
+      before interacting with any digital asset.
+    </li>
+
+    <li>
+      IDFI does not recognize unofficial token contracts, unofficial pairs
+      or third-party representations as protocol-authorized deployments.
+    </li>
+
+    <li>
+      Future contract deployments, if any, will be documented only after
+      deployment and verification.
+    </li>
+
+  </ul>
+
+</div>
+
+ <div class="doc-card">
+
+  <h4>Current On-Chain Deployment</h4>
+
+  <p>
+    IDFI's current public smart-contract deployment is limited to IDOLL
+    on BNB Smart Chain.
+  </p>
+
+  <p>
+    IDFI EX infrastructure development is not dependent on the deployment
+    of additional IDFI-issued smart contracts. Any future network or
+    smart-contract expansion would require a separate technical,
+    operational and risk review.
+  </p>
+
+</div>
+
+         <!-- Security & Fake Tokens -->
+                <section class="doc-section" id="doc-security">
+  <h2>Security &amp; Operational Controls</h2>
+
+  <p>
+    IDFI applies a layered security model across its current on-chain assets and
+    the IDFI EX private market infrastructure. Security controls are designed to
+    keep capital ownership, accounting state, market capacity and execution
+    authority as separate control domains.
+  </p>
+
+  <p>
+    IDFI EX is currently private infrastructure. Public deposits, public trading
+    and public liquidity participation are not enabled.
+  </p>
+
+  <div class="doc-box">
+    <h3>Current Access Model</h3>
+    <ul>
+      <li>
+        <strong>Private infrastructure:</strong>
+        IDFI EX is currently intended for controlled internal development and
+        operational validation.
+      </li>
+      <li>
+        <strong>No public deposits:</strong>
+        public customer funds are not currently accepted into the IDFI EX
+        operating-capital domain.
+      </li>
+      <li>
+        <strong>No public trading:</strong>
+        the current infrastructure does not provide public customer trading access.
+      </li>
+      <li>
+        <strong>No public liquidity admission:</strong>
+        public liquidity providers and unrelated third-party capital are not part
+        of the current CORE-HPP model.
+      </li>
+      <li>
+        <strong>Controlled authority:</strong>
+        access to internal operational functions does not by itself create capital,
+        market or execution authority.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Capital &amp; Execution Security</h3>
+    <ul>
+      <li>
+        <strong>Protocol-owned capital:</strong>
+        the current CORE-HPP model is designed around protocol-controlled operating
+        capital rather than public or unaffiliated third-party capital.
+      </li>
+      <li>
+        <strong>Capital separation:</strong>
+        treasury capital remains distinct from capital admitted into the operating
+        accounting domain.
+      </li>
+      <li>
+        <strong>Bounded capacity:</strong>
+        available capital does not automatically become executable market capacity.
+        Capacity remains subject to accounting, market depth, inventory and
+        operational risk controls.
+      </li>
+      <li>
+        <strong>Asset-local inventory:</strong>
+        supported assets are designed to operate within independent inventory
+        domains without unrestricted cross-asset borrowing or silent balance
+        substitution.
+      </li>
+      <li>
+        <strong>Execution separation:</strong>
+        a market-action candidate does not independently authorize wallet,
+        settlement or transaction execution.
+      </li>
+      <li>
+        <strong>No silent resizing:</strong>
+        candidate notional and asset identity must remain consistent through
+        applicable control layers.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Market-Control Security</h3>
+    <ul>
+      <li>
+        Market actions must represent a legitimate economic purpose.
+      </li>
+      <li>
+        Self-trading and synthetic-volume targeting are not permitted design
+        objectives.
+      </li>
+      <li>
+        Market capacity must remain within independently bounded risk and inventory
+        limits.
+      </li>
+      <li>
+        Stale market data, excessive spread, excessive price deviation, insufficient
+        executable depth or incomplete control state are designed to prevent a
+        market-action candidate from receiving approval.
+      </li>
+      <li>
+        Invalid or incomplete control conditions are designed to fail closed rather
+        than create execution authority.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Contract &amp; Impersonation Security</h3>
+
+    <p>
+      IDFI users and observers should independently verify all public on-chain
+      information before interacting with any digital asset or external market.
+    </p>
+
+    <ul>
+      <li>
+        Always verify contract addresses through official IDFI documentation and
+        recognized blockchain explorers.
+      </li>
+      <li>
+        Beware of similarly named assets, typo-tokens, unofficial pairs and
+        impersonation accounts.
+      </li>
+      <li>
+        IDFI does not recognize unlisted third-party contracts or unofficial pairs
+        as protocol-authorized deployments.
+      </li>
+      <li>
+        Existing external market information should be independently verified
+        on-chain before interaction.
+      </li>
+      <li>
+        Future contract deployments, if any, will be documented only after
+        deployment and verification.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Credential &amp; Communication Security</h3>
+    <ul>
+      <li>
+        IDFI will never request private keys, seed phrases or wallet recovery
+        credentials through direct messages.
+      </li>
+      <li>
+        Private keys and signing credentials must never be treated as public
+        operational data.
+      </li>
+      <li>
+        Unsolicited requests involving wallet credentials, token transfers or
+        unofficial investment arrangements should be treated as suspicious.
+      </li>
+      <li>
+        Official project information should be verified through IDFI documentation
+        and verified communication channels.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Security Principles</h3>
+    <ul>
+      <li>
+        <strong>Isolation:</strong>
+        capital, accounting, inventory, market capacity and execution authority
+        remain explicitly separated.
+      </li>
+      <li>
+        <strong>Least Authority:</strong>
+        access to one control domain does not automatically grant authority over
+        another.
+      </li>
+      <li>
+        <strong>Bounded Risk:</strong>
+        market activity cannot exceed approved capacity and applicable inventory
+        constraints.
+      </li>
+      <li>
+        <strong>Traceability:</strong>
+        internal control decisions are designed to remain attributable and
+        auditable.
+      </li>
+      <li>
+        <strong>Fail Closed:</strong>
+        invalid, stale, inconsistent or incomplete control state does not create
+        market or execution authority.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Current Security Scope</h3>
+    <p>
+      The current development phase is focused on validating IDFI EX accounting,
+      capital isolation, inventory, market-data and risk-control layers. Security
+      architecture will be reviewed again before any broader operational access,
+      public-facing functionality or additional on-chain deployment is considered.
+    </p>
+  </div>
+</section>
 
                 <!-- Whitepaper -->
-                <div id="doc-whitepaper" class="doc-section">
-                    <h2>Whitepaper</h2>
-                    <div class="doc-card">
-                        <p>
-                            <strong>IDFI Whitepaper v1.0</strong> explains:
-                        </p>
-                        <p>
-                            The whitepaper covers:
-                        </p>
-                        <ul class="doc-list">
-                            <li>Index design principles,</li>
-                            <li>Soft-pegged token mechanics,</li>
-                            <li>Tokenomics & revenue model,</li>
-                            <li>Liquidity and market-making strategies,</li>
-                            <li>Security & compliance principles,</li>
-                            <li>Long-term roadmap.</li>
-                        </ul>
-                        
-                        <a href="docs/IDFI_Whitepaper_v1.0.pdf" target="_blank"class="btn">
-                           Download Whitepaper (PDF)
-                        </a>
+   <section class="doc-section" id="doc-whitepaper">
+  <h2>Whitepaper</h2>
 
-                            <span class="doc-note doc-note-inline">
-                                 Official IDFI Whitepaper v1.0
-                        </span>						
-                        
-                    </div>
-                </div>
+  <p>
+    IDFI's documentation has evolved as the project has moved from its first
+    on-chain market deployment toward the development of IDFI EX private market
+    infrastructure.
+  </p>
+
+  <p>
+    Earlier whitepaper material remains part of the project's historical
+    documentation, but it should not be interpreted as a complete description
+    of the current IDFI EX architecture or current development scope.
+  </p>
+
+  <div class="doc-box">
+    <h3>Documentation Status</h3>
+    <ul>
+      <li>
+        <strong>Current architecture reference:</strong>
+        this documentation page describes the present IDFI EX infrastructure
+        model and current development position.
+      </li>
+      <li>
+        <strong>Earlier whitepaper:</strong>
+        existing whitepaper material documents an earlier stage of IDFI's
+        architecture and development assumptions.
+      </li>
+      <li>
+        <strong>Current development focus:</strong>
+        protocol-owned capital, capital isolation, bounded market capacity,
+        asset-local inventory controls and private market infrastructure.
+      </li>
+      <li>
+        <strong>Public functionality:</strong>
+        public deposits, public trading and public liquidity participation are
+        not currently enabled.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Existing Whitepaper</h3>
+
+    <p>
+      The existing IDFI whitepaper was prepared during an earlier development
+      phase and includes concepts associated with the project's original
+      on-chain market and ecosystem design.
+    </p>
+
+    <p>
+      Some concepts, planned assets, liquidity models or development assumptions
+      described in earlier material may no longer represent the current
+      development strategy.
+    </p>
+
+    <p>
+      The existing whitepaper is therefore retained as historical project
+      documentation rather than presented as the authoritative specification
+      of the current IDFI EX architecture.
+    </p>
+
+    <div class="doc-actions">
+      <a class="btn" href="whitepaper.pdf" target="_blank" rel="noopener">
+        View Existing Whitepaper
+      </a>
+    </div>
+  </div>
+
+  <div class="doc-box">
+    <h3>Current Architecture Documentation</h3>
+
+    <p>
+      The current IDFI EX architecture is documented through the technical and
+      operational sections of this documentation page.
+    </p>
+
+    <ul>
+      <li>
+        <strong>IDFI EX Architecture:</strong>
+        isolated private market infrastructure with explicitly separated
+        capital, capacity and execution-control domains.
+      </li>
+      <li>
+        <strong>Controlled Capital / CORE-HPP:</strong>
+        protocol-owned operating capital subject to explicit accounting and
+        ownership boundaries.
+      </li>
+      <li>
+        <strong>Safe Capacity &amp; Risk Controls:</strong>
+        market capacity bounded by available operating capital, executable
+        depth, inventory limits, market conditions and operational risk limits.
+      </li>
+      <li>
+        <strong>Market Infrastructure:</strong>
+        internal market-control logic designed around legitimate economic
+        purpose, bounded candidates and fail-closed controls.
+      </li>
+      <li>
+        <strong>Asset-Local Inventory:</strong>
+        independent inventory domains without unrestricted cross-asset
+        borrowing or silent balance substitution.
+      </li>
+      <li>
+        <strong>Security &amp; Operational Controls:</strong>
+        separation of accounting state, capital ownership, market capacity and
+        execution authority.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Current Documentation Principle</h3>
+
+    <p>
+      Where earlier project material and current documentation differ, the
+      current documentation should be used to understand IDFI's present
+      development scope and architecture.
+    </p>
+
+    <p>
+      This does not retroactively alter historical on-chain deployments or
+      historical project records. It distinguishes earlier design assumptions
+      from the infrastructure currently under development.
+    </p>
+  </div>
+
+  <div class="doc-box">
+    <h3>Future Whitepaper Revision</h3>
+
+    <p>
+      A future whitepaper revision may be prepared after the IDFI EX
+      infrastructure reaches sufficient technical and operational maturity.
+      No publication date is currently announced.
+    </p>
+
+    <p>
+      Any future revision should reflect implemented and validated architecture
+      rather than planned functionality that has not yet reached the required
+      development stage.
+    </p>
+  </div>
+
+  <div class="doc-box">
+    <h3>Document Verification</h3>
+
+    <p>
+      Official IDFI documentation and future whitepaper revisions, if any,
+      should be obtained only through official IDFI channels. Users should
+      independently verify contract addresses, network information and
+      on-chain deployments before interacting with digital assets.
+    </p>
+  </div>
+</section>
 
                 <!-- Roadmap & Changelog -->
-                <div id="doc-roadmap" class="doc-section">
-                    <h2>Roadmap &amp; Changelog</h2>
+  <section class="doc-section" id="doc-roadmap">
+  <h2>Development Status &amp; Roadmap</h2>
 
-                    <div class="doc-card">
-                        <h4>Short-Term Roadmap</h4>
-                        <ul class="doc-list">
-                            <li>Testnet preparations and internal simulations.</li>
-                            <li>Launching liquidity pools on first DEXes.</li>
-                            <li>Documenting bot & algorithmic strategies.</li>
-                            <li>Publishing first audit & security reports.</li>
-                        </ul>
-                    </div>
+  <p>
+    IDFI development is currently focused on the controlled and incremental
+    validation of IDFI EX private market infrastructure. The roadmap is
+    milestone-based rather than date-based.
+  </p>
 
-                    <div class="doc-card">
-                        <h4>Changelog (v0.1)</h4>
-                        <ul class="doc-list">
-                            <li>v0.1 – Website skeleton, documentation and token suite completed.</li>
-                            <li>v0.2 – Contract addresses + audit links to be added after mainnet.</li>
-                        </ul>
-                    </div>
-                </div>
+  <p>
+    Future stages are not treated as commitments until the required technical,
+    operational and risk-control conditions have been validated.
+  </p>
+
+  <div class="doc-box">
+    <h3>Completed Foundation</h3>
+    <ul>
+      <li>
+        <strong>IDOLL deployment:</strong>
+        IDFI's first public on-chain digital asset was deployed on BNB Smart Chain.
+      </li>
+      <li>
+        <strong>External market experience:</strong>
+        the IDOLL / USDT PancakeSwap V3 market provided practical operational
+        experience with on-chain liquidity, market behavior and automated
+        market operations.
+      </li>
+      <li>
+        <strong>Market-data visibility:</strong>
+        IDOLL market information became independently observable through public
+        blockchain and market-data infrastructure.
+      </li>
+      <li>
+        <strong>IDFI EX core infrastructure:</strong>
+        foundational exchange, accounting, market-control and internal
+        infrastructure components have been developed and validated through
+        staged testing.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Current Development Phase — Private Infrastructure</h3>
+
+    <p>
+      Current work is centered on the isolated IDFI EX private market
+      architecture.
+    </p>
+
+    <ul>
+      <li>
+        Protocol-owned operating-capital boundaries.
+      </li>
+      <li>
+        CORE-HPP accounting and capital-isolation controls.
+      </li>
+      <li>
+        Safe Capacity and bounded market-action controls.
+      </li>
+      <li>
+        Asset-local inventory domains.
+      </li>
+      <li>
+        Self-trade prevention and synthetic-volume protections.
+      </li>
+      <li>
+        Market-data, traceability and fail-closed control paths.
+      </li>
+      <li>
+        Separation between market-action candidates and independent execution
+        authority.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Current Operational Boundaries</h3>
+    <ul>
+      <li>
+        <strong>Public deposits:</strong> not enabled.
+      </li>
+      <li>
+        <strong>Public trading:</strong> not enabled.
+      </li>
+      <li>
+        <strong>Public liquidity participation:</strong> not enabled.
+      </li>
+      <li>
+        <strong>Unaffiliated external capital in CORE-HPP:</strong> not enabled.
+      </li>
+      <li>
+        <strong>IDOLL protocol liquidity expansion:</strong> paused.
+      </li>
+      <li>
+        <strong>IDOLL active protocol market operations:</strong> paused.
+      </li>
+      <li>
+        <strong>Additional IDFI-issued token deployments:</strong> not currently
+        scheduled.
+      </li>
+      <li>
+        <strong>New smart-contract development:</strong> not part of the current
+        infrastructure phase.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Next Validation Stage</h3>
+
+    <p>
+      The next development stage is intended to move from architectural control
+      validation toward controlled operational readiness.
+    </p>
+
+    <ul>
+      <li>
+        Validate production capital-accounting handoff boundaries.
+      </li>
+      <li>
+        Validate supported major-asset inventory domains individually.
+      </li>
+      <li>
+        Validate market-data freshness, executable depth and pricing inputs.
+      </li>
+      <li>
+        Validate bounded market decisions under realistic operating conditions.
+      </li>
+      <li>
+        Validate operational monitoring, reconciliation and recovery procedures.
+      </li>
+      <li>
+        Preserve separation between capital availability, market capacity and
+        execution authority.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Future Evaluation Gates</h3>
+
+    <p>
+      The following areas may be evaluated only after the private infrastructure
+      reaches sufficient technical and operational maturity. They are not
+      current launch commitments.
+    </p>
+
+    <ul>
+      <li>
+        Controlled operational use of supported major digital assets.
+      </li>
+      <li>
+        Formal infrastructure or ecosystem relationships where technically and
+        operationally appropriate.
+      </li>
+      <li>
+        Additional network support where a clear operational requirement exists.
+      </li>
+      <li>
+        Reassessment of IDOLL protocol-supported market activity after the
+        required infrastructure and risk controls mature.
+      </li>
+      <li>
+        Broader access models only after separate technical, security,
+        operational and applicable regulatory review.
+      </li>
+      <li>
+        Future smart-contract or digital-asset development only after a separate
+        architecture and risk review.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Roadmap Principles</h3>
+    <ul>
+      <li>
+        <strong>Milestones before dates:</strong>
+        development stages are advanced through validation rather than fixed
+        public deadlines.
+      </li>
+      <li>
+        <strong>Implemented before announced:</strong>
+        future documentation should distinguish validated functionality from
+        concepts under evaluation.
+      </li>
+      <li>
+        <strong>Safety before expansion:</strong>
+        additional assets, networks or access models must not bypass existing
+        accounting, inventory and risk boundaries.
+      </li>
+      <li>
+        <strong>Organic market activity:</strong>
+        synthetic-volume targets and self-trading are not development objectives.
+      </li>
+      <li>
+        <strong>Controlled capital:</strong>
+        capital availability alone does not create market or execution authority.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Changelog</h3>
+
+    <p>
+      Material changes to IDFI's public development position will be reflected
+      in the official documentation as the infrastructure evolves.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Current phase:</strong>
+        documentation aligned with the IDFI EX isolated private market
+        architecture.
+      </li>
+      <li>
+        Public liquidity-provider participation removed from the current
+        infrastructure model.
+      </li>
+      <li>
+        Additional IDFI ecosystem token deployments removed from the current
+        development schedule.
+      </li>
+      <li>
+        IDOLL retained as the project's existing on-chain asset and historical
+        market deployment, with protocol-supported market operations currently
+        paused.
+      </li>
+      <li>
+        Roadmap converted from expansion-oriented scheduling to
+        validation-gated infrastructure development.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-box">
+    <h3>Roadmap Notice</h3>
+    <p>
+      This roadmap describes the project's current development direction and
+      should not be interpreted as a guarantee of future functionality, asset
+      deployment, network expansion, public access or a specific implementation
+      date. Material changes will be documented through official IDFI channels.
+    </p>
+  </div>
+</section>
 
                 <!-- FAQ -->
-                <div id="doc-faq" class="doc-section">
-                    <h2>FAQ</h2>
+                <section id="doc-faq" class="doc-section">
+  <h2>FAQ</h2>
 
-                    <div class="doc-card">
-                        <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq1" class="faq-question">
-                                Is IDFI a stablecoin?
-                            </a>
-                            <div id="faq1" class="collapse in">
-                                <p class="faq-answer">
-                                    No. IDFI is a governance and index-capture token. 
-									Peg tokens (IDOLL, IDEU, etc.) have soft-pegged pricing ranges.
-                                </p>
-                            </div>
-                        </div>
+  <div class="faq-list">
 
-                        <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq2" class="faq-question">
-                                Where can I verify contract addresses?
-                            </a>
-                            <div id="faq2" class="collapse">
-                                <p class="faq-answer">
-                                    Always check the <strong>Networks & Contracts</strong> table on this page and official X / Telegram announcements.
-                                </p>
-                            </div>
-                        </div>
+    <details class="faq-item">
+      <summary>What is Independent Digital Finance (IDFI)?</summary>
+      <div class="faq-answer">
+        <p>
+          Independent Digital Finance (IDFI) is developing controlled digital-market
+          infrastructure centered on IDFI EX. The current architecture is designed
+          around protocol-owned capital, isolated risk domains, bounded market
+          capacity and independently verifiable operational controls.
+        </p>
+      </div>
+    </details>
 
-                        <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq3" class="faq-question">
-                                How can I support the ecosystem early?
-                            </a>
-                            <div id="faq3" class="collapse">
-                                <p class="faq-answer">
-                                    By participating in liquidity providing (LP), 
-									Trade-&-Earn strategies and community 
-									contribution (translation, moderation, testing).
-                                </p>
-								
-                            </div>
-                        </div>
-						
-						<div class="faq-item">
-                            <a data-toggle="collapse" href="#faq4" class="faq-question">
-                                What is IDFI?
-                            </a>
-                            <div id="faq4" class="collapse">
-                                <p class="faq-answer">
-                                    IDFI is a liquidity-first DeFi ecosystem built around soft-pegged assets, 
-									transparent liquidity pools and an automated market-making engine. 
-									In Phase 1, the protocol focuses on three core tokens: IDOLL, IDEU and IDFI.
-                                </p>
-								
-                            </div>
-                        </div>
+    <details class="faq-item">
+      <summary>What is IDFI EX?</summary>
+      <div class="faq-answer">
+        <p>
+          IDFI EX is the private market infrastructure currently under development
+          by Independent Digital Finance. Its architecture separates capital
+          ownership, accounting state, market capacity, inventory controls and
+          execution authority into distinct control domains.
+        </p>
+      </div>
+    </details>
 
-						<div class="faq-item">
-                            <a data-toggle="collapse" href="#faq5" class="faq-question">
-                                How does IDOLL maintain its peg?
-                            </a>
-                            <div id="faq5" class="collapse">
-                                <p class="faq-answer">
-                                    IDOLL is designed as a soft-pegged USD asset. 
-									Its price range is supported through liquidity depth, 
-									anchor pools, routing efficiency and market-making activity 
-									rather than a strict hard peg or opaque reserve model.
-                                </p>
-								
-                            </div>
-                        </div>
-						
-						<div class="faq-item">
-                            <a data-toggle="collapse" href="#faq6" class="faq-question">
-                                How is liquidity generated?
-                            </a>
-                            <div id="faq6" class="collapse">
-                                <p class="faq-answer">
-                                    Liquidity is generated through protocol-owned liquidity operations, 
-									treasury allocation, LP participation and automated market-making strategies. 
-									The protocol is designed to grow organically through real market activity and disciplined reinvestment.
-                                </p>
-								
-                            </div>
-                        </div>
-						
-						<div class="faq-item">
-                            <a data-toggle="collapse" href="#faq7" class="faq-question">
-                                Is IDFI backed by real assets?
-                            </a>
-                            <div id="faq7" class="collapse">
-                                <p class="faq-answer">
-                                    No. IDFI and its peg-token system are not marketed as direct claims on 
-									off-chain custodial reserves. They are designed as on-chain soft-pegged assets 
-									supported by transparent liquidity pools, market structure and protocol operations.
-                                </p>
-								
-                            </div>
-						 </div>
-							
-							<div class="faq-item">
-                            <a data-toggle="collapse" href="#faq8" class="faq-question">
-                                Is the project VC funded?
-                            </a>
-                            <div id="faq8" class="collapse">
-                                <p class="faq-answer">
-                                    No. IDFI is not funded by venture capital or external investors. 
-									The protocol is being developed through internal resources, 
-									self-funded liquidity strategy and community-driven growth.
-                                </p>
-                                    
-                             </div>
-                        </div>
-						    
-						    <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq9" class="faq-question">
-                                How does the LP engine work?
-                            </a>
-                            <div id="faq9" class="collapse">
-                                <p class="faq-answer">
-                                    The LP engine is the liquidity core of the protocol. 
-									It manages how liquidity is added, supported and recycled through transparent pools, 
-									treasury operations and bot-assisted market-making. Its purpose is to improve depth, 
-									reduce slippage and support peg stability over time.
-                                </p>
-								
-                            </div>
-                        </div>
-						
-						    <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq10" class="faq-question">
-                                Is there staking?
-                            </a>
-                            <div id="faq10" class="collapse">
-                                <p class="faq-answer">
-                                    Not in Phase 1. The initial focus is on liquidity building, 
-									peg stability and protocol growth. 
-									Any future staking or lock-based governance model would be introduced 
-									later and documented transparently before launch.
-                                </p>
-                                  
-							</div>
-                        </div>
-						
-                            <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq11" class="faq-question">
-                                What is a Liquidity Provider (LP)?
-                            </a>
-                            <div id="faq11" class="collapse">
-                                <p class="faq-answer">
-                                    A liquidity provider supplies tokens to decentralized liquidity pools.
-                                    These pools enable token swaps, improve market depth and reduce slippage across the ecosystem.
-                                </p>
-                                  
-							</div>
-                        </div>
+    <details class="faq-item">
+      <summary>Is IDFI EX currently open to the public?</summary>
+      <div class="faq-answer">
+        <p>
+          No. IDFI EX is currently in a private infrastructure development and
+          validation phase. Public deposits, public trading and public liquidity
+          participation are not currently enabled.
+        </p>
+      </div>
+    </details>
 
-                            <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq12" class="faq-question">
-                                Why are LP providers important?
-                            </a>
-                            <div id="faq12" class="collapse">
-                                <p class="faq-answer">
-                                    LP providers are essential for maintaining healthy trading conditions.
-                                    Deeper liquidity helps support peg ranges, improves routing efficiency 
-									and creates a more resilient decentralized market.
-                                </p>
-                                  
-							</div>
-                        </div> 
-						
-						     <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq13" class="faq-question">
-                                Why does market activity matter for LP providers?
-                            </a>
-                            <div id="faq13" class="collapse">
-                                <p class="faq-answer">
-								<ul class="doc-list"> 
-                                    <li>Market activity allows liquidity pools to process swaps.</li>
-                                    <li>An active market can improve fee generation opportunities, 
-									strengthen price discovery and help maintain healthier liquidity utilization over time.</li>
-                                    <li>IDFI's automated market-making engine is designed to support these conditions through 
-									transparent on-chain trading activity.</li>
-                                </p>
-                               <ul/>  
-							</div>
-                        </div>	
+    <details class="faq-item">
+      <summary>Does IDFI EX accept public liquidity providers?</summary>
+      <div class="faq-answer">
+        <p>
+          No. Public liquidity-provider participation is not part of the current
+          CORE-HPP model. The present architecture is designed around
+          protocol-owned operating capital and explicit capital-isolation controls.
+        </p>
+      </div>
+    </details>
 
-                            <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq14" class="faq-question">
-                                Does IDFI guarantee LP rewards?
-                            </a>
-                            <div id="faq14" class="collapse">
-                                <p class="faq-answer">
-                                    No. 
-									LP returns depend on market activity, trading volume, protocol fees and market conditions.
-                                    IDFI does not guarantee profits or fixed returns.
-                                </p>
-                                  
-							</div>
-                        </div>
+    <details class="faq-item">
+      <summary>What is IDFI EX CAPITAL?</summary>
+      <div class="faq-answer">
+        <p>
+          IDFI EX CAPITAL refers to protocol-controlled treasury capital reserved
+          for future operational use. Treasury capital remains separate from
+          admitted operating capital and does not automatically become executable
+          market capacity.
+        </p>
+      </div>
+    </details>
 
-                            <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq15" class="faq-question">
-                                Does IDFI operate its own liquidity?
-                            </a>
-                            <div id="faq15" class="collapse">
-                                <p class="faq-answer">
-                                    Yes.
-									The ecosystem may maintain protocol-owned liquidity together with community-provided liquidity 
-									in order to support transparent markets and healthy trading conditions.
-                                </p>
-                                  
-							</div>
-                        </div>
+    <details class="faq-item">
+      <summary>What is CORE-HPP?</summary>
+      <div class="faq-answer">
+        <p>
+          CORE-HPP is the protocol-controlled private operating-capital domain
+          used within the IDFI EX architecture. Capital entering this domain must
+          remain subject to explicit accounting, ownership and isolation controls.
+        </p>
+        <p>
+          Public capital and unrelated third-party capital are not part of the
+          current CORE-HPP model.
+        </p>
+      </div>
+    </details>
 
-                            <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq16" class="faq-question">
-                                How does IDFI support liquidity providers?
-                            </a>
-                            <div id="faq16" class="collapse">
-                                <p class="faq-answer">
-								<ul class="doc-list"> 
-                                    <li>IDFI supports the IDOLL / USDT liquidity pool through continuous on-chain market activity, 
-									transparent liquidity operations and automated market-making strategies.</li>
-                                    <li>Rather than promising fixed returns, the ecosystem is designed to 
-									encourage healthy trading activity that may improve pool utilization, 
-									generate recurring swap volume and strengthen long-term liquidity depth.</li>
-                                    <li>IDFI does not manage independent third-party LP positions. 
-									Every liquidity provider remains responsible for selecting, 
-									monitoring and adjusting their own PancakeSwap V3 price ranges.</li>
-                                </p>
-                               <ul/>  
-							
-							</div>
-                        </div>		
-                            							
-						    <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq17" class="faq-question">
-                                What risks are involved?
-                            </a>
-                            <div id="faq17" class="collapse">
-                                <p class="faq-answer">
-                                    As with any DeFi protocol, risks may include smart-contract vulnerabilities, 
-									liquidity shocks, temporary peg deviations, slippage, volatility, 
-									fake-token impersonation attempts and broader market conditions. 
-									Users should always verify official contracts and use risk capital only.
-                                </p>
-								
-                            </div>
-                        </div>
-						
-						    <div class="faq-item">
-                            <a data-toggle="collapse" href="#faq18" class="faq-question">
-                                How does IDFI generate value?
-                            </a>
-                            <div id="faq18" class="collapse">
-                                <p class="faq-answer">
-                                    IDFI generates value through ecosystem growth, liquidity activity, fee flow and protocol utility. 
-									As the liquidity engine, peg-token pairs and market operations expand, 
-									IDFI is designed to capture part of that value through governance relevance and ecosystem participation.
-                                 </p>                               
-								
-                            </div>
-                        </div>
-					  
-					</div>
+    <details class="faq-item">
+      <summary>Does available capital automatically authorize trading?</summary>
+      <div class="faq-answer">
+        <p>
+          No. Capital availability, market capacity and execution authority are
+          separate control concepts within IDFI EX. Available capital alone does
+          not create permission to perform a market action or transaction.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What is Safe Capacity?</summary>
+      <div class="faq-answer">
+        <p>
+          Safe Capacity is the bounded market capacity derived from multiple
+          controls, including available protocol operating capital, executable
+          market depth, asset-local inventory limits, market conditions and
+          operational risk limits.
+        </p>
+        <p>
+          A proposed market action cannot exceed the applicable capacity and
+          inventory boundaries.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How does IDFI EX manage asset inventory?</summary>
+      <div class="faq-answer">
+        <p>
+          Supported assets are designed to operate within independent asset-local
+          inventory domains. The current architecture does not permit unrestricted
+          cross-asset borrowing, silent balance substitution or unrelated
+          inventory netting to bypass an asset's own limits.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does IDFI EX target a fixed trading volume?</summary>
+      <div class="faq-answer">
+        <p>
+          No. Fixed or synthetic volume targets are not design objectives.
+          Market-action candidates must represent a legitimate economic purpose
+          and remain within independently bounded capital, inventory, market-depth
+          and risk constraints.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does IDFI EX permit self-trading or synthetic volume?</summary>
+      <div class="faq-answer">
+        <p>
+          No. Self-trading and synthetic-volume targeting are not permitted design
+          objectives. Market controls are designed to preserve legitimate economic
+          purpose and prevent control paths from being used to manufacture
+          artificial activity.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What happens when market or risk conditions are invalid?</summary>
+      <div class="faq-answer">
+        <p>
+          The architecture is designed to fail closed. Stale market data,
+          excessive spread or price deviation, insufficient executable depth,
+          inventory-limit violations or incomplete control state are designed to
+          prevent a market-action candidate from receiving approval rather than
+          create execution authority.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does a market-action candidate automatically execute a transaction?</summary>
+      <div class="faq-answer">
+        <p>
+          No. Candidate generation and transaction execution are separate control
+          stages. A market-action candidate does not independently authorize a
+          wallet, settlement process or transaction execution.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What is IDOLL?</summary>
+      <div class="faq-answer">
+        <p>
+          IDOLL — Independent Dollar is IDFI's first deployed public on-chain
+          digital asset. It is a USD-referenced soft-pegged digital asset deployed
+          on BNB Smart Chain.
+        </p>
+        <p>
+          Its existing IDOLL / USDT PancakeSwap V3 market remains independently
+          accessible on-chain.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is IDOLL currently abandoned?</summary>
+      <div class="faq-answer">
+        <p>
+          No. IDOLL remains IDFI's existing on-chain asset and part of the
+          project's operational history. Protocol liquidity expansion and active
+          protocol market operations are currently paused.
+        </p>
+        <p>
+          No immediate reactivation or expansion timeline is currently announced.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>When will IDOLL market operations resume?</summary>
+      <div class="faq-answer">
+        <p>
+          No specific date is currently announced. Any future protocol-supported
+          expansion of IDOLL will be considered only after the IDFI EX
+          infrastructure reaches the required operational and risk-control
+          maturity.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Are additional IDFI ecosystem tokens currently planned?</summary>
+      <div class="faq-answer">
+        <p>
+          No additional IDFI ecosystem token deployment is currently scheduled.
+          Current development resources are focused on IDFI EX accounting,
+          capital isolation, market controls, inventory management and operational
+          infrastructure.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is IDFI currently developing new smart contracts?</summary>
+      <div class="faq-answer">
+        <p>
+          New IDFI-issued smart-contract development is not part of the current
+          infrastructure phase. Any future smart-contract or digital-asset
+          deployment would require a separate technical, operational and risk
+          review before implementation.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Where can I verify official contract addresses?</summary>
+      <div class="faq-answer">
+        <p>
+          Official deployed contract information should be verified through the
+          Networks &amp; Contract Addresses section of this documentation and
+          recognized blockchain explorers.
+        </p>
+        <p>
+          IDFI does not recognize unlisted third-party contracts, unofficial pairs
+          or similarly named assets as protocol-authorized deployments.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is IDFI externally or VC funded?</summary>
+      <div class="faq-answer">
+        <p>
+          The current IDFI EX architecture is designed around protocol-controlled
+          capital rather than public liquidity-provider participation or
+          unaffiliated third-party capital within CORE-HPP.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What is the current development priority?</summary>
+      <div class="faq-answer">
+        <p>
+          Current development is focused on validating the IDFI EX isolated
+          private market architecture, including accounting boundaries, capital
+          isolation, Safe Capacity, asset-local inventory controls, market-data
+          integrity, traceability and fail-closed operational controls.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>When will IDFI EX launch publicly?</summary>
+      <div class="faq-answer">
+        <p>
+          No public launch date is currently announced. Development is
+          milestone-based rather than date-based, and broader access would require
+          separate technical, security, operational and applicable regulatory
+          review.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Where should I follow official IDFI updates?</summary>
+      <div class="faq-answer">
+        <p>
+          Material changes to IDFI's development position, deployed assets,
+          operational status or future access model will be documented through
+          official IDFI documentation and verified communication channels.
+        </p>
+      </div>
+    </details>
+
+  </div>
+</section>
                 <!-- /FAQ -->
             </div>
         </div>
